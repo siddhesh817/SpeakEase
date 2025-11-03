@@ -1,0 +1,123 @@
+/* ===== GENERAL LAYOUT ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #b3fcb3, #81d4fa, #f7e64f);
+    background-size: 300% 300%;
+    animation: gradientFlow 8s ease infinite;
+    color: #333333;
+    min-height: 100vh;
+}
+
+/* Animated gradient background */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #ffffffc9;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    text-align: center;
+    color: #0277bd;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, select, textarea {
+    border: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f0faff;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    background: #e3f2fd;
+    box-shadow: 0 0 0 3px #81d4fa;
+    outline: none;
+}
+
+/* ===== BUTTONS ===== */
+button, .btn {
+    background: linear-gradient(135deg, #02d17b, #26c6da);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== RESULT PAGE ===== */
+.result-box {
+    background: #e1f5fe;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation for generated text */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== GO BACK BUTTON ===== */
+.back-btn {
+    background: linear-gradient(135deg, #757575, #9e9e9e);
+}
+.back-btn:hover {
+    background: linear-gradient(135deg, #616161, #757575);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
