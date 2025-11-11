@@ -25,5 +25,6 @@ chain = prompt | model | parser
 
 def generate_text(topic,length):
     result = chain.invoke({'topic': topic,"length":length})
+
     return result
 
